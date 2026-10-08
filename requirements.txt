@@ -1,0 +1,8 @@
+fastapi==0.142.2
+uvicorn[standard]==0.54.0
+gunicorn==26.2.0
+azure-ai-projects==2.7.0
+azure-identity==1.26.0
+python-dotenv==1.2.4
+# Held below 4.15: newer anyio needs a typing_extensions the App Service agent overrides.
+anyio==4.14.2

@@ -1,0 +1,10 @@
+#Do az login
+
+# Delete the existing app.zip file 
+Remove-Item app.zip
+
+# Rezip it 
+tar -a -c -f app.zip app requirements.txt  
+
+# Redeploy it 
+az webapp deploy -g <rg-name> -n <webapp-name> --src-path app.zip --type zip
